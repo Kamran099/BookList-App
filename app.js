@@ -43,6 +43,12 @@ class UI {
         list.appendChild(row);
 
     }
+
+    static clearFields() {
+        document.querySelector('#title').value = '';
+        document.querySelector('#author').value = '';
+        document.querySelector('#isbn').value = '';
+    }
 }
 
 // Store Class: Handles Storage - within the browser
@@ -65,5 +71,8 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
     //Add book to UI
     UI.addBookToList(book);
+
+    // CLEAR FIELDS
+    UI.clearFields();
 });
 // Event: Remove a book
